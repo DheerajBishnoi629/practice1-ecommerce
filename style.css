@@ -1,0 +1,208 @@
+body {
+    font-family: sans-serif;
+    background-color: #FFBE7B;
+  }
+  
+  header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color:#FFA351;
+  }
+  
+  .logo {
+    margin:5px 20px 3px 5px;
+   
+
+  }
+  .logo img{
+    height: 70px;
+    width: 70px;
+  }
+  
+  nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #FFA351;
+    padding: 10px 20px; /* Adjust padding for better spacing */
+  }
+  
+  nav .buttons {
+    display: flex;
+    align-items: center;
+  }
+  
+  nav button {
+    margin-left: 10px;
+    padding: 8px 12px;
+    background-color: #000;
+    color: white;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+  }
+  
+  nav button:hover {
+    opacity: 0.7;
+  }
+  
+  nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  nav li {
+    display: inline-block;
+  }
+  
+  nav a {
+    text-decoration: none;
+    color: black;
+    padding: 10px;
+  }
+  nav ul li a:hover{
+    color: #EED971;
+  }
+  
+  .hero{
+     text-align: center;
+     justify-content: space-between;
+  }
+  .hero p{
+    margin-bottom: 30px;
+  }
+  .button {
+    text-decoration: none;
+    border: none;
+    outline: 0;
+    padding: 12px;
+    color: white;
+    background-color: #000;
+    text-align: center;
+    cursor: pointer;
+    width: 100%;
+    font-size: 18px;
+  }
+  
+  .products {
+    padding: 50px;
+
+  }
+  
+  .products h2 {
+    font-size: 40px;
+  }
+  .product-grid {
+    display: grid;
+    grid-template-columns: 2fr 2fr 2fr 2fr;
+    grid-gap: 20px;
+  }
+  
+  .card {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    max-width: 300px;
+    margin: auto;
+    text-align: center;
+    font-family: arial;
+  }
+  
+  .price {
+    color: grey;
+    font-size: 22px;
+  }
+  
+  .card button {
+    border: none;
+    outline: 0;
+    padding: 12px;
+    color: white;
+    background-color: #000;
+    text-align: center;
+    cursor: pointer;
+    width: 100%;
+    font-size: 18px;
+  }
+  
+  .card button:hover {
+    opacity: 0.7;
+  }
+  
+  footer {
+    text-align: center;
+    padding: 20px;
+  }
+  
+  .social-media {
+    display: flex;
+    justify-content: center;
+  }
+  
+  .social-media a {
+    margin: 0 10px;
+    font-size: 40px;
+  }
+  
+  .fa {
+    font-size: 20px;
+  }
+  #slideshow {
+    width: 100%;
+    height: 670px;
+    overflow: hidden;
+    position: relative;
+    margin: auto 20px auto 2px;
+  }
+  
+  .slides {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: -44px;
+  }
+  
+  .slides li {
+    width: 100%;
+    height: 100%;
+    float: left;
+    position: relative;
+  }
+  
+  .slides li img {
+    width: 100%;
+    height: 100%;
+  }
+  
+  .caption {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    padding: 25px;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: #fff;
+    font-size: 16px;
+    text-align: center;
+  }
+  #welcome-container {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 1000;
+  }
+
+  #welcome-msg {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #fff;
+    font-size: 40px;
+    opacity: 1;
+  }

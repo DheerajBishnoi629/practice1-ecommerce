@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>The Boot</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="https://kit.fontawesome.com/7bb1ec5717.js" crossorigin="anonymous"></script>
+  <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+  <link rel="icon" type="image/x-icon" href="images/logo.png">
+</head>
+<body>
+  <header>
+    <div class="logo">
+      <img src="images/logo.png" alt="The Boot logo">
+    </div>
+    <h1>The Boot</h1>
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="product.html">Products</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+      <div class="buttons">
+        <button id="cartButton">Cart</button>
+        <button id="loginButton">Login</button>
+        <button id="signupButton">Sign Up</button>
+      </div>
+    </nav>
+  </header>
+  <div id="welcome-container">
+    <div id="welcome-msg">Welcome to The Boot!</div>
+  </div>
+
+  <main>
+    <section class="hero">
+      <p>Your one-stop shop for all things footwear.</p>
+      <a href="product.html" class="button">Shop Now</a>
+    </section>
+   
+    <div id="slideshow">
+      <ul class="slides">
+        <li>
+          <a href="product.html"><img src="images/slide1.jpg" alt="Image 1">
+          <div class="caption">Nike Air Huarache Run Ultra "Black Total Crimson"</div></a>
+        </li>
+        <li>
+          <a href="product.html"><img src="images/Slide2.jpg" alt="Image 2">
+          <div class="caption">Adidas Unisex Originals Continental 80</div></a>
+        </li>
+        <li>
+          <a href="product.html"><img src="images/Slide3.jpg" alt="Image 3">
+          <div class="caption">Jimmy Choo - TowerBrook</div></a>
+        </li>
+        <li>
+          <a href="product.html"><img src="images/Slide4.jpg" alt="Image 3">
+          <div class="caption">Butterfly Boots Womens</div></a>
+        </li>
+      </ul>
+    </div>
+
+    <section class="products">
+      <h2>Top Rated Products</h2>
+      <div class="product-grid">
+        <div class="card">
+          <img src="images/product1.jpeg" alt="Hiking Boots" style="width:100%">
+          <h1>Hiking Boots</h1>
+          <p class="price">$57.99</p>
+          <p>Men's Fashion Hiking Boots...</p>
+          <p><button>Add to Cart</button></p>
+        </div>
+
+        <div class="card">
+          <img src="images/product2.jpeg" alt="Timberland" style="width:100%">
+          <h1>Timberland</h1>
+          <p class="price">$89.99</p>
+          <p>Timberland Basic 6-Inch Boot - Men's..</p>
+          <p><button>Add to Cart</button></p>
+        </div>
+
+        <div class="card">
+          <img src="images/Product3.jpeg" alt="Off-White shoes" style="width:100%">
+          <h1>Off-White</h1>
+          <p class="price">$99.99</p>
+          <p>Out of Office Sneakers..</p>
+          <p><button>Add to Cart</button></p>
+        </div>
+
+        <div class="card">
+          <img src="images/Product4.jpg" alt="Nike Shoes" style="width:100%">
+          <h1>Nike</h1>
+          <p class="price">$129.99</p>
+          <p>Court Legacy Sneaker - Mens..</p>
+          <p><button>Add to Cart</button></p>
+        </div>
+
+        <div class="card">
+          <img src="images/Product5.jpg" alt="Nike Shoes" style="width:100%">
+          <h1>Nike</h1>
+          <p class="price">$89.99</p>
+          <p>Court Vision Mid Next Nature Basketball..</p>
+          <p><button>Add to Cart</button></p>
+        </div>
+
+        <div class="card">
+          <img src="images/Product6.jpg" alt="Dr. Scholl's" style="width:100%">
+          <h1>Dr. Scholl's</h1>
+          <p class="price">$79.99</p>
+          <p>Time off Platform Sneaker - Women's..</p>
+          <p><button>Add to Cart</button></p>
+        </div>
+
+        <div class="card">
+          <img src="images/Product7.jpg" alt="Marc Fisher" style="width:100%">
+          <h1>Marc Fisher</h1>
+          <p class="price">$69.99</p>
+          <p>Garina Bootie for women's..</p>
+          <p><button>Add to Cart</button></p>
+        </div>
+
+        <div class="card">
+          <img src="images/Product8.jpg" alt="Dolce Vita" style="width:100%">
+          <h1>Dolci Vita</h1>
+          <p class="price">$89.99</p>
+          <p>Farlin Chelsea Bootie for women's..</p>
+          <p><button>Add to Cart</button></p>
+        </div>
+      </div>
+    </section>
+  </main>
+  <script>
+      $(document).ready(function() {
+      // welcome massage
+      $('#welcome-container').fadeIn();
+
+      // Hide message
+      setTimeout(function() {
+        $('#welcome-container').fadeOut();
+      }, 3000);
+    });
+    $(document).ready(function() {
+      let slideIndex = 0;
+      let slides = $('.slides li');
+  
+      function showSlide(n) {
+        slides.hide();
+        slides.eq(n).fadeIn();
+        slideIndex = n;
+      }
+  
+      function nextSlide() {
+        slideIndex++;
+        if (slideIndex >= slides.length) {
+          slideIndex = 0;
+        }
+        showSlide(slideIndex);
+      }
+  
+      showSlide(0);
+  
+      setInterval(nextSlide, 3000);
+    });
+    
+  $(document).ready(function () {
+        let cartItems = [];
+
+    function updateCartCount() {
+      let cartCount = cartItems.length;
+      $('#cartButton').text('Cart (' + cartCount + ')');
+    }
+
+    $('.card button').click(function () {
+      let productTitle = $(this).closest('.card').find('h1').text();
+      let productPrice = $(this).closest('.card').find('.price').text();
+
+      cartItems.push({ title: productTitle, price: productPrice });
+
+      updateCartCount();
+
+      alert(productTitle + ' added to cart!');
+    });
+
+    $('#cartButton').click(function () {
+      alert('View Cart: ' + JSON.stringify(cartItems));
+    });
+
+    $('#loginButton').click(function () {
+      alert('Login clicked!');
+    });
+
+    $('#signupButton').click(function () {
+      alert('Sign Up clicked!');
+    });
+  });
+
+  </script>
+  <footer>
+    <div class="social-media">
+      <a href="#"><i class="fa-brands fa-facebook fa-fade" style="color: #483cec;"></i></a>
+      <a href="#"><i class="fa-brands fa-twitter fa-fade" style="color: #009adb;"></i></a>
+      <a href="#"><i class="fa-brands fa-instagram fa-fade" style="color: #fb3c3c;"></i></a>
+    </div>
+    <p style="margin: 20px auto 1px auto; text-align: end;">&copy; 2023 The Boot. All rights reserved.</p>
+  </footer>
+</body>
+</html>

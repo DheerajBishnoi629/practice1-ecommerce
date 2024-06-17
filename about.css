@@ -1,0 +1,144 @@
+body {
+    font-family: sans-serif;
+    background-color: #FFBE7B;
+  }
+  
+  header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color:#FFA351;
+  }
+  
+  .logo {
+    margin:5px 20px 3px 5px;
+  }
+  .logo img{
+    height: 70px;
+    width: 70px;
+  }
+  
+  nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #FFA351;
+    padding: 10px 20px; /* Adjust padding for better spacing */
+  }
+  
+  nav .buttons {
+    display: flex;
+    align-items: center;
+  }
+  
+  nav button {
+    margin-left: 10px;
+    padding: 8px 12px;
+    background-color: #000;
+    color: white;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+  }
+  
+  nav button:hover {
+    opacity: 0.7;
+  }
+  
+  nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  nav li {
+    display: inline-block;
+  }
+  
+  nav a {
+    text-decoration: none;
+    color: black;
+    padding: 10px;
+  }
+  nav ul li a:hover{
+    color: #EED971;
+  }
+  
+  .about {
+    padding: 50px;
+   
+  }
+  
+  .about h2 {
+    font-size: 40px;
+  }
+  
+  .about p {
+    font-size: 20px;
+  }
+  
+  .about img {
+    width: 500px;
+  }
+  main{
+    margin:.5px;
+  }
+  
+  footer {
+    text-align: center;
+    padding: 20px;
+  }
+  .social-media {
+    display: flex;
+    justify-content: center;
+  }
+  
+  .social-media a {
+    margin: 0 10px;
+    font-size: 40px;
+  }
+  
+  .info{
+    display: flex;
+    margin: 10px auto 10px auto;
+  }
+  .info p{
+    line-height: 4cap;
+    margin-left: 150px;
+    margin-right: 200px;
+  }
+  .info img{
+    height: 350px;
+    margin-right: 150px;
+  }
+  .mission{
+    display: flex;
+    margin: 10px auto 10px auto;
+  }
+  .mission p{
+    margin-right: 150px;
+    line-height: 4cap;
+    margin-right: 150px;
+  }
+  .mission img{
+    height: 350px;
+    margin-left: 150px;
+    margin-right: 200px;
+  }
+  .happy{
+    display: flex;
+    margin: 10px auto 10px auto;
+  }
+  .happy p{
+    line-height: 4cap;
+    margin-left: 150px;
+    margin-right: 200px;
+  }
+  .happy img{
+    height: 350px;
+    margin-right: 150px;
+  }
+  h2{
+    text-align: center;
+
+  }

@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>About | The Boot</title>
+  <link rel="stylesheet" href="about.css">
+  <script src="https://kit.fontawesome.com/7bb1ec5717.js" crossorigin="anonymous"></script>
+  <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+  <link rel="icon" type="image/x-icon" href="images/logo.png">
+</head>
+<body>
+  <header>
+    <div class="logo">
+      <a href="index.html"><img src="images/logo.png" alt="The Boot logo"></a>
+    </div>
+    <h1>The Boot</h1>
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="product.html">Products</a></li>
+        <li><a href="contact.html">Contact</a></li>`
+      </ul>
+      <div class="buttons">
+        <button id="cartButton">Cart</button>
+        <button id="loginButton">Login</button>
+        <button id="signupButton">Sign Up</button>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <section class="about">
+      <h2>About The Boot</h2>
+      <div class="info">
+      <p>The Boot is a new and innovative online shoe store that was established in 2023 in the United States. We are passionate about shoes and believe that everyone should have access to high-quality, affordable footwear.</p>
+
+      <img src="images/companyimg.jpg" alt="The Boot company image">
+    </div>
+    
+    <div class="mission">
+      <img src="images/Storeimg.jpg" alt="The Boot company image">
+      <p>Our mission is to provide our customers with the best possible shopping experience. We offer a wide selection of shoes from top brands at competitive prices. We also offer free shipping on all orders over $50.</p>
+
+    </div>
+
+    <div class="happy">
+      <p>We are committed to customer satisfaction and want to make sure that all of our customers are happy with their purchase. If you are not satisfied with your order for any reason, please contact us and we will be happy to help you.</p>
+    
+      <img src="images/happycustomer.jpg" alt="The Boot company image">
+    </div>
+    </section>
+  </main>
+  <script>
+      $(document).ready(function() {
+      $('.info, .mission, .happy').css('margin', '0');
+
+      $(window).scroll(function() {
+        let scrollPosition = $(window).scrollTop();
+
+        if (scrollPosition >= $('.info').offset().top - 500) {
+          // Apply margin animation for .info
+          $('.info').animate({
+            margin: '80px'
+          }, 2000);
+        }
+
+        if (scrollPosition >= $('.mission').offset().top - 500) {
+          $('.mission').animate({
+            margin: '80px'
+          }, 2000);
+        }
+
+        if (scrollPosition >= $('.happy').offset().top - 500) {
+          $('.happy').animate({
+            margin: '80px'
+          }, 2000);
+        }
+      });
+    });
+  </script>
+  <footer>
+    <div class="social-media">
+      <a href="#"><i class="fa-brands fa-facebook fa-fade" style="color: #483cec;"></i></a>
+      <a href="#"><i class="fa-brands fa-twitter fa-fade" style="color: #009adb;"></i></a>
+      <a href="#"><i class="fa-brands fa-instagram fa-fade" style="color: #fb3c3c;"></i></a>
+    </div>
+    <p style="margin: 20px auto 1px auto; text-align: end;">&copy; 2023 The Boot. All rights reserved.</p>
+  </footer>
+</body>
+</html>
